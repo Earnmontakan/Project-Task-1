@@ -1,5 +1,5 @@
 import "./App.css";
-
+import Navbar from "./components/Navbar";
 const POSTS = [
   {
     id: 1,
@@ -29,6 +29,12 @@ const USERS = [
   { id: 3, name: "วิชาญ โค้ดเก่ง", email: "wichan@dev.com" },
 ];
 
-function App() {}
+function App() {
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
+}
 
 export default App;
