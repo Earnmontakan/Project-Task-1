@@ -85,7 +85,7 @@ function PostList({ favorites, onToggleFavorite }) {
         <PostCard
           key={post.id}
           post={post}
-          isFavorite={favorites.includes(post.id)}
+          isFavorite={favorites?.includes(post.id)}
           onToggleFavorite={() => onToggleFavorite(post.id)}
         />
       ))}
