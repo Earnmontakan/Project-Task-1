@@ -1,42 +1,57 @@
+/* #root = div หลักสุดของ React (อยู่ใน index.html)
+   👉 ทุก component จะถูก render อยู่ข้างในนี้ */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1280px; /* กำหนดความกว้างสูงสุดของหน้าเว็บ */
+  margin: 0 auto; /* จัดให้อยู่กึ่งกลางแนวนอน */
+  padding: 2rem; /* ระยะห่างด้านใน */
+  text-align: center; /* จัดข้อความให้อยู่กลาง */
 }
 
+/* .logo = class สำหรับรูปโลโก้ */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 6em; /* ความสูงของโลโก้ */
+  padding: 1.5em; /* ระยะห่างรอบโลโก้ */
+  will-change: filter; /* บอก browser ว่าจะมีการเปลี่ยน filter */
+  transition: filter 300ms; /* ทำ animation ตอน hover */
 }
+
+/* เมื่อเอาเมาส์ไปชี้ (hover) โลโก้ */
 .logo:hover {
+  /* ใส่เงาสีม่วง */
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
+/* ถ้าโลโก้มี class "react" เพิ่ม */
 .logo.react:hover {
+  /* ใส่เงาสีฟ้า (เฉพาะ React logo) */
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* สร้าง animation ชื่อ logo-spin */
 @keyframes logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* เริ่มต้นไม่หมุน */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* หมุนครบ 1 รอบ */
   }
 }
 
+/* media query เช็คว่า user ไม่ได้ปิด animation */
 @media (prefers-reduced-motion: no-preference) {
+  /* เลือก <a> ตัวที่ 2 แล้วเลือก .logo ข้างใน */
   a:nth-of-type(2) .logo {
+    /* ทำให้โลโก้หมุนตลอดเวลา */
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* .card = class สำหรับกล่อง (เช่น card UI) */
 .card {
-  padding: 2em;
+  padding: 2em; /* ระยะห่างด้านใน */
 }
 
+/* .read-the-docs = class สำหรับข้อความ hint */
 .read-the-docs {
-  color: #888;
+  color: #888; /* สีเทา */
 }
